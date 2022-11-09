@@ -600,7 +600,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      forest_pallete_2: -628644763
+      forest_pallete_10: -886920386
       forest_pallete_5: -1172198578
       forest_pallete_7: -1155940743
       forest_pallete_11: 1795877109
@@ -622,7 +622,7 @@ TextureImporter:
       forest_pallete_15: -25846724
       forest_pallete_0: -1912344980
       forest_pallete_8: 1615003204
-      forest_pallete_10: -886920386
+      forest_pallete_2: -628644763
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

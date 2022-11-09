@@ -23,6 +23,8 @@ public class MageController : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
+        rotatePlayerBasedOnHorizontalInput();
+
         Vector2 move = new Vector2(horizontal, vertical);
 
         //Approximately -> move.x == 0.0f
@@ -33,7 +35,7 @@ public class MageController : MonoBehaviour
         }
         m_Moving = (move != Vector2.zero);
         m_Animator.SetBool("isMoving", m_Moving);
-        m_Animator.SetFloat("facingLeft", move.x);
+
     }
     private void FixedUpdate()
     {
@@ -43,4 +45,16 @@ public class MageController : MonoBehaviour
         transform.position = position;
         m_Body.MovePosition(position);
     }
+    private void rotatePlayerBasedOnHorizontalInput()
+    {
+        if (horizontal < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (horizontal > 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+    }
 }
+

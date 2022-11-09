@@ -225,7 +225,7 @@ MonoBehaviour:
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
+  m_BlendUpdateMethod: 0
   m_DefaultBlend:
     m_Style: 1
     m_Time: 2
@@ -4925,19 +4925,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8352062986670961305, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8352062986670961305, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8352062986670961305, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8352062986670961305, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8352062986670961305, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4945,7 +4945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8352062986670961305, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 8352062986670961305, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
