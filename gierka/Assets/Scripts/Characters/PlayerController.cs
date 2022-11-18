@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MageController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float movementSpeed = 5.0f;
-    public Vector2 m_FacingDirection = Vector2.left;
+    protected Vector2 m_FacingDirection = Vector2.left;
     protected Rigidbody2D m_Body;
     protected Animator m_Animator;
 
     protected float horizontal;
     protected float vertical;
     protected bool m_Moving = false;
+
+    protected WeaponBase m_Weapon;
+    public GameObject WeaponPrefab;
     void Start()
     {
         m_Body = GetComponent<Rigidbody2D>();
@@ -36,6 +39,19 @@ public class MageController : MonoBehaviour
         m_Moving = (move != Vector2.zero);
         m_Animator.SetBool("isMoving", m_Moving);
 
+        if (Input.GetKeyDown(KeyCode.E) && m_Weapon == null)
+        {
+            EquipWeapon();
+        }
+        if (m_Weapon)
+        {
+           
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                m_Weapon.Attack();
+            }
+        }
+
     }
     private void FixedUpdate()
     {
@@ -55,6 +71,13 @@ public class MageController : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
+    }
+    public void EquipWeapon()
+    {
+        GameObject newWeapon = Instantiate(WeaponPrefab, m_Body.position, Quaternion.identity);
+        m_Weapon = newWeapon.GetComponent<WeaponBase>();
+        m_Weapon.Owner = this;
+        Debug.Log("Weapon Equiped");
     }
 }
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 999c5264152b73b4787353520e41511b
+guid: 58b41cd8f326b9f46904f12a34bf784a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,176 +103,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mage-sheet_1
+      name: force-of-nature-projectile-sheet_1
       rect:
         serializedVersion: 2
-        x: 36
-        y: 96
-        width: 23
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 838065a09e512bf4a9b19acf8cd6d354
-      internalID: 2082627955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage-sheet_3
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 64
-        width: 26
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eca39e3b6004f9942a2967ecd769b44a
-      internalID: -167402089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage-sheet_4
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 65
-        width: 26
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 646de63bbd1d9544caa03aba5e4b1088
-      internalID: -1639629508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage-sheet_5
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 64
-        width: 26
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f56ac7b22e42a5046a7edd3fe98f7b9e
-      internalID: 1163538177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage-sheet_6
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 65
-        width: 26
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb6f411053710d14e8618c2819353282
-      internalID: 1362613453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage-sheet_8
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 32
-        width: 23
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f92f5f3af1e6ea4086b909c8a8f8c6f
-      internalID: 1086721906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage-sheet_9
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 32
-        width: 22
-        height: 30
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f99fce142d22b0b4f801dfb18f741112
-      internalID: 562867362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage-sheet_11
-      rect:
-        serializedVersion: 2
-        x: 36
+        x: 8
         y: 0
-        width: 23
-        height: 30
+        width: 8
+        height: 8
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f18c23196dff744fa06933c1ed08f42
-      internalID: -964550070
+      spriteID: 075d54f5b23aa634a9479bbd38de98aa
+      internalID: 1977976578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage-sheet_12
+      name: force-of-nature-projectile-sheet_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 16
         y: 0
-        width: 23
-        height: 30
+        width: 8
+        height: 8
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e27101a2d2666f47bd97d093346af69
-      internalID: -687152000
+      spriteID: b9a6acb94d569d84dadfa534562ac2e8
+      internalID: 1566877151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage-sheet_13
+      name: force-of-nature-projectile-sheet_3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 24
         y: 0
-        width: 23
-        height: 30
+        width: 8
+        height: 8
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1b30177da650b14ea1693030b62247a
-      internalID: 1498251428
+      spriteID: 3b0e6c9dda5a3ca4ab01f16cbde6ed94
+      internalID: -520816013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage-sheet_0
+      name: force-of-nature-projectile-sheet_4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 97
-        width: 30
-        height: 30
+        x: 32
+        y: 0
+        width: 8
+        height: 8
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96ef1650f7532e24094c52556673c6d8
-      internalID: -800517053
+      spriteID: 2d7839b194ec8244db838cc0814e18b5
+      internalID: -86936982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage-sheet_2
+      name: force-of-nature-projectile-sheet_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 65
-        width: 30
-        height: 30
+        x: 40
+        y: 0
+        width: 8
+        height: 8
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 004dc81f58af6c84cbfdd46a4ef069c8
-      internalID: -490123789
+      spriteID: e7e227a88209a6241a8edb8bdfc7df3a
+      internalID: 592984854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage-sheet_7
+      name: force-of-nature-projectile-sheet_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 33
-        width: 30
-        height: 30
+        x: 48
+        y: 0
+        width: 8
+        height: 8
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c98552fba868f6b4092cab88f4494bb0
-      internalID: 468171154
+      spriteID: e27caf321ce97de498db069ec4b1f82a
+      internalID: -812543626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage-sheet_10
+      name: force-of-nature-projectile-sheet_7
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 30
-        height: 30
+        x: 56
+        y: 0
+        width: 8
+        height: 8
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,8 +247,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c52107897e0a34418f3831187c09c0a
-      internalID: 1095445920
+      spriteID: 66619fb1349fd8e40b30852a0e873483
+      internalID: 448482053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: force-of-nature-projectile-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe2d908e7664a44183a19beda0e9ce4
+      internalID: 1743618568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: force-of-nature-projectile-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71cde9ff26fe7d94e8a3b7b3849eeaf2
+      internalID: 1469156663
       vertices: []
       indices: 
       edges: []
@@ -423,20 +306,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mage-sheet_6: 1362613453
-      mage-sheet_2: -490123789
-      mage-sheet_11: -964550070
-      mage-sheet_12: -687152000
-      mage-sheet_7: 468171154
-      mage-sheet_3: -167402089
-      mage-sheet_5: 1163538177
-      mage-sheet_10: 1095445920
-      mage-sheet_13: 1498251428
-      mage-sheet_8: 1086721906
-      mage-sheet_9: 562867362
-      mage-sheet_0: -800517053
-      mage-sheet_4: -1639629508
-      mage-sheet_1: 2082627955
+      force-of-nature-projectile-sheet_3: -520816013
+      force-of-nature-projectile-sheet_9: 1469156663
+      force-of-nature-projectile-sheet_4: -86936982
+      force-of-nature-projectile-sheet_7: 448482053
+      force-of-nature-projectile-sheet_5: 592984854
+      force-of-nature-projectile-sheet_2: 1566877151
+      force-of-nature-projectile-sheet_8: 1743618568
+      force-of-nature-projectile-sheet_6: -812543626
+      force-of-nature-projectile-sheet_0: 929272925
+      force-of-nature-projectile-sheet_1: 1977976578
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

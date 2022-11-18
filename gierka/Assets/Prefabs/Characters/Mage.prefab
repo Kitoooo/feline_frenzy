@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1560167114619671489
 SpriteRenderer:
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &5145642558332762136
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -101,18 +101,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0025314987, y: -0.8845989}
+  m_Offset: {x: 0.030850649, y: 0.14441931}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.4375, y: 1.875}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.66007406, y: 0.2597443}
+  m_Size: {x: 0.62473536, y: 0.29181087}
   m_EdgeRadius: 0
 --- !u!50 &3949829380611440020
 Rigidbody2D:
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  m_FacingDirection: {x: -1, y: 0}
+  WeaponPrefab: {fileID: 4442941892304160643, guid: 07a8c80e2135cf94daca32f3eda5a175, type: 3}
 --- !u!95 &1731917652491408891
 Animator:
   serializedVersion: 4
@@ -159,7 +159,7 @@ Animator:
   m_GameObject: {fileID: 5137086857374516954}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cc50b7416aeff6d45a888d551e225966, type: 2}
+  m_Controller: {fileID: 9100000, guid: 261b824faa28d794aa67f27fa7c9b984, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
