@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8267153803017019662}
   m_Layer: 0
   m_Name: ForceOfNatureProjectile
-  m_TagString: Untagged
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.25, y: 0.25}
+    oldSize: {x: 0.33333334, y: 0.33333334}
     newSize: {x: 0.25, y: 0.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -167,3 +167,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb6b8492fa7ddff46b2d9b484a4f04ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  range: 1000
+  damage: 0

@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BasicProjectile : MonoBehaviour
 {
     protected Rigidbody2D m_Body;
     public float range = 1000.0f;
-    public float damage;
+    [SerializeField] public float damage = 10f;
+    [SerializeField] public float speed = 300;
+
+    private string[] m_TagsToIgnore = { "Player","PlayerProjectile","Weapon" };
+    
+
 
     void Awake()
     {
@@ -21,18 +27,24 @@ public class BasicProjectile : MonoBehaviour
         }
     }
 
-    public void Fire(Vector2 direction, float force)
+    public void Fire(Vector2 direction)
     {
-        m_Body.AddForce(direction * force);
+        m_Body.AddForce(direction * speed);
     }
 
     //check if not owner
     void OnCollisionEnter2D(Collision2D other)
     {
-        //dont destroy projectiles if they hit each other, will still trigger on contact with player
-        //if (other.collider.GetComponent<BasicProjectile>() != null)
-        //   return;
-        Debug.Log("Projectile Collision with " + other.gameObject);
+        // Debug.Log("Collision with: "+ other.gameObject.tag);
+        if(m_TagsToIgnore.Contains(other.gameObject.tag))
+        {
+            return;
+        }
+        else if (other.gameObject.tag == "Enemy"){
+            other.gameObject.GetComponent<Enemy>().UpdateHealth(-damage);
+        }
+
         Destroy(gameObject);
+
     }
 }

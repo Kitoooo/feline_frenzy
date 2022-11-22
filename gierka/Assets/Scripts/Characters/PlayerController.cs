@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     protected float horizontal;
     protected float vertical;
     protected bool m_Moving = false;
-
     protected WeaponBase m_Weapon;
     public GameObject WeaponPrefab;
     void Start()
