@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     private float attackTimer = 0.0f;
     private CircleCollider2D m_CircleCollider;
     [SerializeField] private float spottingDistance = 4.0f;
+    protected Animator m_Animator;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
         health = maxHealth;
         m_CircleCollider = GetComponent<CircleCollider2D>();
         m_CircleCollider.radius = spottingDistance;
+        m_Animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -51,6 +53,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             target = collision.gameObject.transform;
+            m_Animator.SetBool("isWalking", true);
             Debug.Log("Target acquired");
         }
     }
@@ -60,6 +63,7 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             target = null;
+            m_Animator.SetBool("isWalking", false);
             Debug.Log("Target Lost");
         }
     }
@@ -68,6 +72,10 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy took " + amount + " damage");
         health += amount;
+        if(amount < 0)
+        {
+            m_Animator.SetTrigger("Hit");
+        }
         if (health > maxHealth)
         {
             health = maxHealth;
