@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     private CircleCollider2D m_CircleCollider;
     [SerializeField] private float spottingDistance = 4.0f;
     protected Animator m_Animator;
+    [SerializeField] protected float despawnTimer = 5.0f;
+    protected bool m_IsDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +30,20 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target != null)
+        if(m_IsDead)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+            despawnTimer -= Time.deltaTime;
+            if(despawnTimer <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            if (target != null)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+            }
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -72,25 +85,27 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy took " + amount + " damage");
         health += amount;
-        if(amount < 0)
-        {
-            m_Animator.SetTrigger("Hit");
-        }
         if (health > maxHealth)
         {
             health = maxHealth;
         }
         else if (health <= 0.0f)
         {
+            m_IsDead = true;
             Die();
+        }
+        else if (amount < 0)
+        {
+            m_Animator.SetTrigger("Hit");
         }
     }
 
     private void Die()
     {
+        m_Animator.SetBool("isDead", m_IsDead);
         //TODO: deduwa xD;
-        health = 0.0f;
+        //health = 0.0f;
         Debug.Log("Enemy died");
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }

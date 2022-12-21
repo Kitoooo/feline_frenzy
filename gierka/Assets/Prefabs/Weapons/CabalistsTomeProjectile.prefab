@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1000
-  damage: 1
+  damage: 200
   speed: 300
 --- !u!50 &1414703912663295919
 Rigidbody2D:
