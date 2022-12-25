@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1286790781888463802}
   - component: {fileID: 1731917652491408891}
   - component: {fileID: 596481810704732523}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Mage
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -182,3 +182,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c24bead8402ca4c9da4804a65f43cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100

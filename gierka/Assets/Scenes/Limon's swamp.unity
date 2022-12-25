@@ -11122,10 +11122,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1286790781888463802, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
-      propertyPath: WeaponPrefab
-      value: 
-      objectReference: {fileID: 4442941892304160643, guid: 07a8c80e2135cf94daca32f3eda5a175, type: 3}
     - target: {fileID: 5137086857374516954, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: m_Name
       value: Mage
