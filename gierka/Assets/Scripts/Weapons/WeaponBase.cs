@@ -10,8 +10,12 @@ abstract public class WeaponBase : MonoBehaviour
     //used by projectiles to determine where to move
     protected Vector3 m_AttackDirection = Vector3.left;
 
-    //attack speed / fire rate
-    //public float attackSpeed = 300;
+    //attack speed / fire rate in seconds
+    public float attackSpeed = 3;
+    protected float m_AttackSpeedTimer = 0.0f;
+
+    [SerializeField]
+    protected WeaponTriggerType m_TriggerType;
 
     public PlayerController Owner
     {
@@ -22,14 +26,59 @@ abstract public class WeaponBase : MonoBehaviour
     public float orbitRadius = 1;
     public bool pointAtCursor = false;
 
+    protected void Update() 
+    {
+        if (m_AttackSpeedTimer > 0.0f)
+        {
+            m_AttackSpeedTimer -= Time.deltaTime;
+        }
+    }
+
     void FixedUpdate()
     {
         OrbitOwner();
     }
 
+    //to allow enemies to use weapons add || Owner.tags.contains(enemy) to every if
+    public void checkTrigger()
+    {
+        if (m_AttackSpeedTimer<=0.0f)
+        {
+            bool attacked = false;
+            switch(m_TriggerType)
+            {
+                case WeaponTriggerType.Auto:
+                    if(Input.GetMouseButton(0))
+                    {
+                        Attack();
+                        attacked = true;
+                    }
+                    break;
+                case WeaponTriggerType.Burst:
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        for(int i = 0; i < 2; i++) //this sucks
+                            Attack();
+                        attacked = true;
+                    }
+                    break;
+                case WeaponTriggerType.Semi_Auto:
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        Attack();
+                        attacked = true;
+                    }
+                    break;
+            }
+            if(attacked)
+            {
+                m_AttackSpeedTimer = 1 / attackSpeed;
+            }
+        }
+    }
+
     public abstract void Attack();
 
-    //TODO: make y offset for weapon
     protected void OrbitOwner()
     {
         if(m_Owner)
@@ -60,5 +109,12 @@ abstract public class WeaponBase : MonoBehaviour
             }
             m_AttackDirection = direction.normalized;
         }
+    }
+
+    public enum WeaponTriggerType
+    {
+        Auto,
+        Burst,
+        Semi_Auto
     }
 }

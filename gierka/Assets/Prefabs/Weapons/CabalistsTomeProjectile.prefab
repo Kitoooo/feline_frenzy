@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4920083263158459782}
   - component: {fileID: 4920083263158459897}
   - component: {fileID: 4920083263158459896}
+  - component: {fileID: 6705597400142829332}
   - component: {fileID: 1414703912663295919}
   - component: {fileID: -1607913637902625433}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: CabalistsTomeProjectile
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
@@ -87,7 +88,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &4920083263158459897
 Animator:
   serializedVersion: 4
@@ -121,8 +122,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1000
-  damage: 200
-  speed: 300
+  damage: 10
+  speed: 500
+  m_ProjectileContactBehaviourPrefab: {fileID: 2483310098706345734, guid: b653dda63ec79a843929bea03dd5bd04, type: 3}
+--- !u!114 &6705597400142829332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4920083263158459899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7848f9ebf04f01d4db72a55d387a965e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1414703912663295919
 Rigidbody2D:
   serializedVersion: 4
@@ -154,7 +168,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.16666667}

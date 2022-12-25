@@ -12,15 +12,15 @@ public class ForceOfNatureController : WeaponBase
         orbitRadius = 1.0f;
     }
 
-    void Update()
+    protected new void Update()
     {
-        
+        base.Update();
     }
     public override void Attack()
     {
         GameObject projectileObject = Instantiate(projectilePrefab,  firePoint.transform.position, Quaternion.identity);
 
-        BasicProjectile projectile = projectileObject.GetComponent<BasicProjectile>();
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.Fire(m_AttackDirection);
     }
 }

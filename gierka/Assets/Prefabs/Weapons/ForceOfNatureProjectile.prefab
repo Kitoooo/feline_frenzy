@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1943878975184476560}
   - component: {fileID: 932668035580929461}
   - component: {fileID: 8267153803017019662}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ForceOfNatureProjectile
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &5278673835718621011
 Animator:
   serializedVersion: 4
@@ -139,14 +139,14 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.125}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.33333334, y: 0.33333334}
+    oldSize: {x: 0.5, y: 0.5}
     newSize: {x: 0.25, y: 0.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -168,4 +168,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1000
-  damage: 0
+  damage: 10
+  speed: 500
+  m_ProjectileContactBehaviourPrefab: {fileID: 7543876336664797687, guid: 02908b7cfc995e34895b7421b0e26c8d, type: 3}

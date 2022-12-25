@@ -117,7 +117,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &5416036345549589782
 Animator:
   serializedVersion: 4
@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d41c083897a418458d8f8e554e737b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSpeed: 7
+  m_TriggerType: 0
   orbitRadius: 1
   pointAtCursor: 0
   projectilePrefab: {fileID: 4920083263158459899, guid: 3f9869c353aed3a4599922c2e57d300e, type: 3}

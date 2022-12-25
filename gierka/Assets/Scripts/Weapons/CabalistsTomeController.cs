@@ -16,8 +16,9 @@ public class CabalistsTomeController : WeaponBase
         m_Animator = GetComponent<Animator>();
     }
 
-    void Update()
+    protected new void Update()
     {
+        base.Update();
         Animate();
     }
     public override void Attack()
@@ -26,7 +27,7 @@ public class CabalistsTomeController : WeaponBase
 
         GameObject projectileObject = Instantiate(projectilePrefab, firePoint.transform.position, Quaternion.identity);
 
-        BasicProjectile projectile = projectileObject.GetComponent<BasicProjectile>();
+        Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.Fire(m_AttackDirection);
 
     }

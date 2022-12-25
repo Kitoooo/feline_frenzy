@@ -44,11 +44,7 @@ public class PlayerController : MonoBehaviour
         }
         if (m_Weapon)
         {
-           
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                m_Weapon.Attack();
-            }
+            m_Weapon.checkTrigger();
         }
 
     }
