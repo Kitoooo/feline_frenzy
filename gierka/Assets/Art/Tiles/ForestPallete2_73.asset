@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ForestPallete2_54
+  m_Name: ForestPallete2_73
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1550861446, guid: 2bb62d4c800282d49b233d8ea639355b, type: 3}
+  m_Sprite: {fileID: -1498552214, guid: 2bb62d4c800282d49b233d8ea639355b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

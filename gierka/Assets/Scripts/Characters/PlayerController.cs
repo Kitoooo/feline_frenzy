@@ -22,9 +22,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-
+        //Debug.Log(horizontal);
         rotatePlayerBasedOnHorizontalInput();
 
         Vector2 move = new Vector2(horizontal, vertical);
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && m_Weapon == null)
         {
+            //Debug.Log("a");
             EquipWeapon();
         }
         if (m_Weapon)
