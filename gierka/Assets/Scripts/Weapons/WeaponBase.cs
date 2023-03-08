@@ -4,7 +4,8 @@ using UnityEngine;
 
 abstract public class WeaponBase : MonoBehaviour
 {
-
+    //xddddddddddddddddddddddddddddddddddddddddddddddd
+    public abstract GameObject AbstractProjectilePrefab { get;}
     //holds reference to weapon owner
     protected PlayerController m_Owner;
     //used by projectiles to determine where to move

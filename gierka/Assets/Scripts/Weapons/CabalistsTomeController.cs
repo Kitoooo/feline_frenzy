@@ -10,6 +10,7 @@ public class CabalistsTomeController : WeaponBase
     protected float m_AnimationChangeDelay;
     protected float m_TimeSinceLastAnimationChange = 0.0f;
 
+    public override GameObject AbstractProjectilePrefab{ get { return projectilePrefab; }}
     void Start()
     {
         orbitRadius = 1.0f;

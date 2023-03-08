@@ -7,6 +7,7 @@ public class ForceOfNatureController : WeaponBase
     public GameObject projectilePrefab;
     public Transform firePoint;
     
+    public override GameObject AbstractProjectilePrefab{ get { return projectilePrefab; }}
     void Start()
     {
         orbitRadius = 1.0f;

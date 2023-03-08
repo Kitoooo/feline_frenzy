@@ -12,8 +12,11 @@ public class PlayerController : MonoBehaviour
     protected float horizontal;
     protected float vertical;
     protected bool m_Moving = false;
-    protected WeaponBase m_Weapon;
-    public GameObject WeaponPrefab;
+    public WeaponBase m_EquippedWeapon;
+
+    [SerializeField]
+    protected GameObject WeaponPrefab;
+    
     void Start()
     {
         m_Body = GetComponent<Rigidbody2D>();
@@ -39,14 +42,14 @@ public class PlayerController : MonoBehaviour
         m_Moving = (move != Vector2.zero);
         m_Animator.SetBool("isMoving", m_Moving);
 
-        if (Input.GetKeyDown(KeyCode.E) && m_Weapon == null)
+        if (Input.GetKeyDown(KeyCode.E) && m_EquippedWeapon == null)
         {
             //Debug.Log("a");
             EquipWeapon();
         }
-        if (m_Weapon)
+        if (m_EquippedWeapon)
         {
-            m_Weapon.checkTrigger();
+            m_EquippedWeapon.checkTrigger();
         }
 
     }
@@ -72,8 +75,8 @@ public class PlayerController : MonoBehaviour
     public void EquipWeapon()
     {
         GameObject newWeapon = Instantiate(WeaponPrefab, m_Body.position, Quaternion.identity);
-        m_Weapon = newWeapon.GetComponent<WeaponBase>();
-        m_Weapon.Owner = this;
+        m_EquippedWeapon = newWeapon.GetComponent<WeaponBase>();
+        m_EquippedWeapon.Owner = this;
         Debug.Log("Weapon Equiped");
     }
 }
