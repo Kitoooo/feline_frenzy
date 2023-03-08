@@ -9,6 +9,13 @@ public class DamageBuff : PowerupEffect
 
     public override void ApplyEffect(GameObject target)
     {
-        target.GetComponent<PlayerController>().m_EquippedWeapon.AbstractProjectilePrefab.GetComponent<Projectile>().damage += amount;
+        target.GetComponent<PlayerController>().m_EquippedWeapon.attackDamage += amount;
+        Debug.Log("Buff applied to " + target);
+    }
+
+    public override void RemoveEffect(GameObject target)
+    {
+        target.GetComponent<PlayerController>().m_EquippedWeapon.attackDamage -= amount;
+        Debug.Log("Buff removed from " + target);
     }
 }

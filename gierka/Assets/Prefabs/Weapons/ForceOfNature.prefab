@@ -130,7 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea17576f9c836074e82eb041745d5a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 5
+  attackSpeed: 2
+  attackDamage: 20
   m_TriggerType: 2
   orbitRadius: 1
   pointAtCursor: 0

@@ -5,15 +5,19 @@ using UnityEngine;
 abstract public class WeaponBase : MonoBehaviour
 {
     //xddddddddddddddddddddddddddddddddddddddddddddddd
-    public abstract GameObject AbstractProjectilePrefab { get;}
+    public abstract GameObject AbstractProjectilePrefab { get; }
     //holds reference to weapon owner
     protected PlayerController m_Owner;
     //used by projectiles to determine where to move
     protected Vector3 m_AttackDirection = Vector3.left;
 
     //attack speed / fire rate in seconds
-    public float attackSpeed = 3;
+    [SerializeField]
+    protected float attackSpeed;
     protected float m_AttackSpeedTimer = 0.0f;
+
+    [SerializeField]
+    public float attackDamage;
 
     [SerializeField]
     protected WeaponTriggerType m_TriggerType;

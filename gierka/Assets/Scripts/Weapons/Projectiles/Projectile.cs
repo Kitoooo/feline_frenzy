@@ -8,11 +8,10 @@ public class Projectile : MonoBehaviour
     protected Rigidbody2D m_Body;
     public float range = 1000.0f;
     [SerializeField] 
-    public float damage = 10f;
-    [SerializeField] 
     public float speed = 300;
     [SerializeField]
     protected GameObject m_ProjectileContactBehaviourPrefab;
+    public WeaponBase OwningWeapon { get; set; }
 
     private string[] m_TagsToIgnore = { "Player","PlayerProjectile","Weapon" };
     public string[] TagsToIgnore { get { return m_TagsToIgnore; } }

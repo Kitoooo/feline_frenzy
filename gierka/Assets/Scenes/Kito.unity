@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 764217788}
   - component: {fileID: 764217787}
   - component: {fileID: 764217786}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PowerUp
   m_TagString: PowerUp
   m_Icon: {fileID: 0}
@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 11400000, guid: 18abc9b6daa26f540bc3b7ab77eeed6f, type: 2}
+  m_Duration: 4
 --- !u!58 &764217787
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6074,6 +6075,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2063286361061531192, guid: f34cfcdf791fbc94db5e4c10dd29b656, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3711591085683642202, guid: f34cfcdf791fbc94db5e4c10dd29b656, type: 3}
       propertyPath: m_Name
       value: slime-sheet_0
@@ -6121,6 +6126,10 @@ PrefabInstance:
     - target: {fileID: 4645763872968281938, guid: f34cfcdf791fbc94db5e4c10dd29b656, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7817413033993175478, guid: f34cfcdf791fbc94db5e4c10dd29b656, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []

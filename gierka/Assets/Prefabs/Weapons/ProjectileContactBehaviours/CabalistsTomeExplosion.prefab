@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8518452147946925273}
   - component: {fileID: 6341204421058496646}
   - component: {fileID: 4154569556860293130}
+  - component: {fileID: -734138355449441024}
   m_Layer: 13
-  m_Name: ProjectileExplosion
+  m_Name: CabalistsTomeExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b9be48191622c704cbd1081e82dc282c, type: 3}
+  m_Sprite: {fileID: 1353551778, guid: f2e74e03f735ff5439200cc970e1f03e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,3 +102,23 @@ MonoBehaviour:
   m_LayerToCheck:
     serializedVersion: 2
     m_Bits: 4096
+--- !u!95 &-734138355449441024
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543876336664797687}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13536f253e3915c4aa20ae936ed5d2cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -22,6 +22,7 @@ public class ForceOfNatureController : WeaponBase
         GameObject projectileObject = Instantiate(projectilePrefab,  firePoint.transform.position, Quaternion.identity);
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
+        projectile.OwningWeapon = this;
         projectile.Fire(m_AttackDirection);
     }
 }
