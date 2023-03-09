@@ -28,7 +28,7 @@ public class Powerup : MonoBehaviour
             m_RemainingDuration -= Time.deltaTime;
             if (m_RemainingDuration <= 0)
             {
-                effect.RemoveEffect(m_AffectedTarget);
+                effect.ApplyEffect(m_AffectedTarget);
                 Destroy(gameObject);
             }
         }
