@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    protected Rigidbody2D m_Body;
+    public Rigidbody2D m_Body { get; protected set; }
     public float range = 1000.0f;
     [SerializeField] 
     public float speed = 300;
