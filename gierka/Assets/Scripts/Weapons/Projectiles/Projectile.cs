@@ -15,14 +15,20 @@ public class Projectile : MonoBehaviour
 
     private string[] m_TagsToIgnore = { "Player","PlayerProjectile","Weapon" };
     public string[] TagsToIgnore { get { return m_TagsToIgnore; } }
-   
+
+    public Dictionary<string, object> contactStorage { get; protected set; }
+
+    public Vector3 lastVelocity;
+
     void Awake()
     {
         m_Body = GetComponent<Rigidbody2D>();
+        contactStorage = new Dictionary<string, object>();
     }
 
     void Update()
     {
+        lastVelocity = m_Body.velocity;
         if (transform.position.magnitude > range)
         {
             Destroy(gameObject);
@@ -47,6 +53,7 @@ public class Projectile : MonoBehaviour
             GameObject projectileContactBehaviour = Instantiate(m_ProjectileContactBehaviourPrefab, transform.position, Quaternion.identity);
 
             ProjectileContact contactBehaviour = projectileContactBehaviour.GetComponent<ProjectileContact>();
+            contactBehaviour.lastVelocity = lastVelocity;
             contactBehaviour.OnContact(this, other);
         }
     }

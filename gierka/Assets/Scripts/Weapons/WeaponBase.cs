@@ -112,6 +112,15 @@ abstract public class WeaponBase : MonoBehaviour
                     rotationZ
                 );
             }
+            float angle = Vector3.Angle(Vector3.right,direction);
+            if (angle < 90)
+            {
+               transform.rotation = Quaternion.Euler(0, 180 ,0);
+            }
+            else
+            {
+               transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
             m_AttackDirection = direction.normalized;
         }
     }

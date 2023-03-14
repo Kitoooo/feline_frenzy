@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f2e74e03f735ff5439200cc970e1f03e
+guid: be359d058a1adec4fa1cd072038e7858
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,106 +107,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cabalists-tome-projectile-explosion-sheet_1
+      name: bane-of-doom-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6404c5612ee26b3488c8684eff34c7b1
+      internalID: 1185423515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bane-of-doom-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effdc10067bf21346a14b65e0a763b0a
+      internalID: 1360509918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bane-of-doom-sheet_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c47fe2fab0aa054b8417a5b08614920
-      internalID: 1353551778
+      spriteID: e67df66570acd2a4c872f2aaa8d12c1e
+      internalID: -1430709225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cabalists-tome-projectile-explosion-sheet_2
+      name: bane-of-doom-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea566cf5b047eab48813cf8be045c332
+      internalID: 158205171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bane-of-doom-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89435473c4d434f4a93db88529868d76
+      internalID: 1594526836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bane-of-doom-sheet_6
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0225d9b74cce402458ef2c8fe6fc6db6
-      internalID: 1698059032
+      spriteID: 2cef95e667ae2344593b79bf08e6bfd9
+      internalID: -273812971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cabalists-tome-projectile-explosion-sheet_3
+      name: bane-of-doom-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7e3c32088f0044490da446fba162d4
+      internalID: 685034597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bane-of-doom-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9b5a412b929354191fba0e7c512dee
+      internalID: 1644132076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bane-of-doom-sheet_9
       rect:
         serializedVersion: 2
         x: 144
         y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef8d9ea574d700a4c90efd2e62ddfd55
-      internalID: -344950760
+      spriteID: 160056faf45079f48b1703afc150f3f2
+      internalID: -1479897082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cabalists-tome-projectile-explosion-sheet_4
+      name: bane-of-doom-sheet_10
       rect:
         serializedVersion: 2
-        x: 192
+        x: 160
         y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65fb74d55ffec2149a5634c229aac3c1
-      internalID: -1421394506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cabalists-tome-projectile-explosion-sheet_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a372e58f3ee9074b8d0bc3568a82add
-      internalID: 1013526930
+      spriteID: c0a51a79af086cc4f968d8b43aa2b602
+      internalID: -921084706
       vertices: []
       indices: 
       edges: []
@@ -222,12 +327,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cabalists-tome-projectile-explosion-sheet_0: 928980470
-      cabalists-tome-projectile-explosion-sheet_3: -344950760
-      cabalists-tome-projectile-explosion-sheet_4: -1421394506
-      cabalists-tome-projectile-explosion-sheet_5: 1013526930
-      cabalists-tome-projectile-explosion-sheet_2: 1698059032
-      cabalists-tome-projectile-explosion-sheet_1: 1353551778
+      bane-of-doom-sheet_5: 1594526836
+      bane-of-doom-sheet_7: 685034597
+      bane-of-doom-sheet_10: -921084706
+      bane-of-doom-sheet_4: 158205171
+      bane-of-doom-sheet_6: -273812971
+      bane-of-doom-sheet_9: -1479897082
+      bane-of-doom-sheet_3: -1430709225
+      bane-of-doom-sheet_8: 1644132076
+      bane-of-doom-sheet_2: 1360509918
+      bane-of-doom-sheet_0: -1431568863
+      bane-of-doom-sheet_1: 1185423515
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
