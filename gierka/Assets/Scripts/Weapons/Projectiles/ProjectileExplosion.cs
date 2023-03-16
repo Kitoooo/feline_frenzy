@@ -31,7 +31,7 @@ public class ProjectileExplosion : ProjectileContact
         }
     }
 
-    public override void OnContact(Projectile self, Collider2D other)
+    public override void OnContact(Projectile self, Collision2D other)
     {
         Collider2D[] ObjectsInExplosion = Physics2D.OverlapCircleAll(transform.position, m_ExplosionRadius, m_LayerToCheck);
         foreach (Collider2D obj in ObjectsInExplosion)

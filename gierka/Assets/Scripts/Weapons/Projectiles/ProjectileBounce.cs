@@ -13,7 +13,7 @@ public class ProjectileBounce : ProjectileContact
         m_BouncesLeft = m_MaxBounces + 1;
     }
 
-    public override void OnContact(Projectile self, Collider2D other)
+    public override void OnContact(Projectile self, Collision2D other)
     {
         int bouncesLeft = getRemainingBounces(self);
         if (bouncesLeft < 0)
@@ -24,9 +24,9 @@ public class ProjectileBounce : ProjectileContact
         {
             var speed = lastVelocity.magnitude;
 
-            Vector2 baka = other.ClosestPoint(self.transform.position);
-            var direction = Vector3.Reflect(lastVelocity.normalized, baka.normalized);
-            //var direction = Vector3.Reflect(lastVelocity.normalized, other.contacts[0].normal);
+            //Vector2 baka = other.ClosestPoint(self.transform.position);
+            //var direction = Vector3.Reflect(lastVelocity.normalized, baka.normalized);
+            var direction = Vector3.Reflect(lastVelocity.normalized, other.contacts[0].normal);
 
             Rigidbody2D rigidbody = self.GetComponent<Rigidbody2D>();
             rigidbody.velocity = direction * Mathf.Max(speed, 10.0f);

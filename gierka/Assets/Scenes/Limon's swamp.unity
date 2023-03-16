@@ -43523,6 +43523,10 @@ PrefabInstance:
       propertyPath: WeaponPrefab
       value: 
       objectReference: {fileID: 6486627467685014179, guid: ae00a017843cb4c4c8292f8139183811, type: 3}
+    - target: {fileID: 3949829380611440020, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5137086857374516954, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: m_Name
       value: Mage

@@ -5,5 +5,5 @@ using UnityEngine;
 public abstract class ProjectileContact : MonoBehaviour
 {
     public Vector2 lastVelocity { get; set; }
-    public abstract void OnContact(Projectile self, Collider2D other);
+    public abstract void OnContact(Projectile self, Collision2D other);
 }

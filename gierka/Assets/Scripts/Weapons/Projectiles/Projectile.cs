@@ -41,7 +41,7 @@ public class Projectile : MonoBehaviour
     }
 
     //check if not owner
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log("Collision with: "+ other.gameObject.tag);
         if (m_TagsToIgnore.Contains(other.gameObject.tag))
@@ -57,4 +57,5 @@ public class Projectile : MonoBehaviour
             contactBehaviour.OnContact(this, other);
         }
     }
-}
+
+}   

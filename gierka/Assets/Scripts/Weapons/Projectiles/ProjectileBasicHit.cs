@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ProjectileBasicHit : ProjectileContact
 {
-    public override void OnContact(Projectile self, Collider2D other) 
+    public override void OnContact(Projectile self, Collision2D other) 
     {
         if (other.gameObject.tag == "Enemy")
             other.gameObject.GetComponent<Enemy>().UpdateHealth(-self.OwningWeapon.attackDamage);
