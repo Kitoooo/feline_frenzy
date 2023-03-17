@@ -9,8 +9,9 @@ public class ProjectileBasicHit : ProjectileContact
     {
         if (other.gameObject.tag == "Enemy")
             other.gameObject.GetComponent<Enemy>().UpdateHealth(-self.OwningWeapon.attackDamage);
-        Destroy(self.gameObject);
+        //Destroy(self.gameObject);
         Destroy(gameObject);
+        self.markForDestroyFlags["BasicHit"] = true;
     }
 }
 //https://www.youtube.com/watch?v=mbX4FbDhx30

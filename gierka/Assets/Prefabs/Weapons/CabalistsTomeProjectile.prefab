@@ -123,7 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1000
   speed: 500
-  m_ProjectileContactBehaviourPrefab: {fileID: 7543876336664797687, guid: 02908b7cfc995e34895b7421b0e26c8d, type: 3}
+  m_ProjectileContactBehaviourPrefabs:
+  - {fileID: 7543876336664797687, guid: 726d73ad7d3a29e49a1cccd34ee3f68a, type: 3}
+  - {fileID: 7188763316694279462, guid: 85205263f27182b4ab5a719f90b865f7, type: 3}
   lastVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &6705597400142829332
 MonoBehaviour:
@@ -156,7 +158,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &-1607913637902625433
 BoxCollider2D:

@@ -9,11 +9,6 @@ public class PolarStarController : WeaponBase
 
     public override GameObject AbstractProjectilePrefab => throw new System.NotImplementedException();
 
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     protected new void Update()
     {

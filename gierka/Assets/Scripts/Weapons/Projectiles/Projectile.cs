@@ -9,14 +9,20 @@ public class Projectile : MonoBehaviour
     public float range = 1000.0f;
     [SerializeField] 
     public float speed = 300;
+    //[SerializeField]
+    //protected GameObject m_ProjectileContactBehaviourPrefab;
     [SerializeField]
-    protected GameObject m_ProjectileContactBehaviourPrefab;
+    protected List<GameObject> m_ProjectileContactBehaviourPrefabs;
     public WeaponBase OwningWeapon { get; set; }
 
     private string[] m_TagsToIgnore = { "Player","PlayerProjectile","Weapon" };
     public string[] TagsToIgnore { get { return m_TagsToIgnore; } }
 
+    //allow contacts scripts to store data between hits
     public Dictionary<string, object> contactStorage { get; protected set; }
+
+    //to prevent destruction on contact at least one script has to set its flag to false
+    public Dictionary<string, bool> markForDestroyFlags { get; protected set; }
 
     public Vector3 lastVelocity;
 
@@ -24,12 +30,22 @@ public class Projectile : MonoBehaviour
     {
         m_Body = GetComponent<Rigidbody2D>();
         contactStorage = new Dictionary<string, object>();
+        markForDestroyFlags = new Dictionary<string, bool>();
     }
 
     void Update()
     {
+        bool marked = true;
+        foreach(var flag in markForDestroyFlags)
+        {
+            if(flag.Value == false)
+            {
+                marked = false;
+                break;
+            }
+        }
         lastVelocity = m_Body.velocity;
-        if (transform.position.magnitude > range)
+        if (transform.position.magnitude > range || (marked && markForDestroyFlags.Count > 0))
         {
             Destroy(gameObject);
         }
@@ -50,11 +66,15 @@ public class Projectile : MonoBehaviour
         }
         else 
         {
-            GameObject projectileContactBehaviour = Instantiate(m_ProjectileContactBehaviourPrefab, transform.position, Quaternion.identity);
+            foreach(GameObject projectileContactBehaviourPrefab in m_ProjectileContactBehaviourPrefabs)
+            {
+                GameObject projectileContactBehaviour = Instantiate(projectileContactBehaviourPrefab, transform.position, Quaternion.identity);
 
-            ProjectileContact contactBehaviour = projectileContactBehaviour.GetComponent<ProjectileContact>();
-            contactBehaviour.lastVelocity = lastVelocity;
-            contactBehaviour.OnContact(this, other);
+                ProjectileContact contactBehaviour = projectileContactBehaviour.GetComponent<ProjectileContact>();
+                contactBehaviour.lastVelocity = lastVelocity;
+                contactBehaviour.OnContact(this, other);
+            }
+           
         }
     }
 

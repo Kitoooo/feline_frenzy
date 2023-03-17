@@ -10,7 +10,7 @@ public class ProjectileBounce : ProjectileContact
 
     private void Awake()
     {
-        m_BouncesLeft = m_MaxBounces + 1;
+        m_BouncesLeft = m_MaxBounces;
     }
 
     public override void OnContact(Projectile self, Collision2D other)
@@ -18,10 +18,12 @@ public class ProjectileBounce : ProjectileContact
         int bouncesLeft = getRemainingBounces(self);
         if (bouncesLeft < 0)
         {
-            Destroy(self.gameObject);
+            //Destroy(self.gameObject);
+            self.markForDestroyFlags["Bounce"] = true;
         }
         else
         {
+            self.markForDestroyFlags["Bounce"] = false;
             var speed = lastVelocity.magnitude;
 
             //Vector2 baka = other.ClosestPoint(self.transform.position);

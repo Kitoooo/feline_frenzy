@@ -14,21 +14,23 @@ public class ProjectileExplosion : ProjectileContact
 
     private void Awake()
     {
+        /*
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.transform.localScale = new Vector3(m_ExplosionRadius, m_ExplosionRadius, 1);
         m_ExplosionRadius *= 1.4142135623731f; //sqrt(2)
         m_Animator = GetComponent<Animator>();
+        */
     }
 
     void Update()
     {
-        if(m_Exploded)
+        /*if(m_Exploded)
         {
             if(m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
                 Destroy(gameObject);
             }
-        }
+        }*/
     }
 
     public override void OnContact(Projectile self, Collision2D other)
@@ -38,7 +40,9 @@ public class ProjectileExplosion : ProjectileContact
         {
             obj.gameObject.GetComponent<Enemy>().UpdateHealth(-self.OwningWeapon.attackDamage);
         }
-        Destroy(self.gameObject);
+        
+        self.markForDestroyFlags["BasicHit"] = true;
         m_Exploded = true;
+        Destroy(gameObject);
     }
 }
