@@ -62,12 +62,12 @@ abstract public class WeaponBase : MonoBehaviour
                 case WeaponTriggerType.Burst:
                     if (Input.GetMouseButtonDown(0))
                     {
-                        for(int i = 0; i < 2; i++) //this sucks
-                            Attack();
+                        float delay = Mathf.Min(attackSpeed / 3, 0.1f);
+                        StartCoroutine(BurstFire(delay));
                         attacked = true;
                     }
                     break;
-                case WeaponTriggerType.Semi_Auto:
+                case WeaponTriggerType.SemiAuto:
                     if (Input.GetMouseButtonDown(0))
                     {
                         Attack();
@@ -112,16 +112,28 @@ abstract public class WeaponBase : MonoBehaviour
                     rotationZ
                 );
             }
-            float angle = Vector3.Angle(Vector3.right,direction);
-            if (angle < 90)
-            {
-               transform.rotation = Quaternion.Euler(0, 180 ,0);
-            }
             else
             {
-               transform.rotation = Quaternion.Euler(0, 0, 0);
+                float angle = Vector3.Angle(Vector3.right, direction);
+                if (angle < 90)
+                {
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
             }
             m_AttackDirection = direction.normalized;
+        }
+    }
+
+    private IEnumerator BurstFire(float delay)
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            Attack();
+            yield return new WaitForSeconds(delay);
         }
     }
 
@@ -129,6 +141,6 @@ abstract public class WeaponBase : MonoBehaviour
     {
         Auto,
         Burst,
-        Semi_Auto
+        SemiAuto
     }
 }

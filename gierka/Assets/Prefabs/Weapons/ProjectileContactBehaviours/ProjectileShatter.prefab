@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59987a5a4b57d7449d9909a3a29fe96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_DamageIndicatorPrefab: {fileID: 3419559236437000355, guid: 6f7d6f3d874e3144fa97826d52000d83, type: 3}
   m_ProjectileCount: 8
   m_ProjectileShardPrefab: {fileID: 3518225079671063145, guid: 491071cb375caaa48a383f538508055e, type: 3}

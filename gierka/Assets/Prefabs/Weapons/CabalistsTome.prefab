@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSpeed: 7
-  attackDamage: 5
+  attackDamage: 20
   m_TriggerType: 0
   orbitRadius: 1
   pointAtCursor: 0

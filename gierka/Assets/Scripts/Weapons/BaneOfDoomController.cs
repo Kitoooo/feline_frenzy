@@ -9,10 +9,7 @@ public class BaneOfDoomController : WeaponBase
 
     public override GameObject AbstractProjectilePrefab => throw new System.NotImplementedException();
 
-    void Start()
-    {
-        
-    }
+   
 
     protected new void Update()
     {

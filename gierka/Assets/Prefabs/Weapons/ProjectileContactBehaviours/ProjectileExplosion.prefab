@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a06a8eabe00faf4cb271c6350bd5d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_DamageIndicatorPrefab: {fileID: 3419559236437000355, guid: 6f7d6f3d874e3144fa97826d52000d83, type: 3}
   m_ExplosionRadius: 1
   m_LayerToCheck:
     serializedVersion: 2

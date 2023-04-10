@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3949829380611440020}
   - component: {fileID: 1286790781888463802}
   - component: {fileID: 1731917652491408891}
-  - component: {fileID: 596481810704732523}
+  - component: {fileID: 709620721}
   m_Layer: 11
   m_Name: Mage
   m_TagString: Player
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1560167114619671489
 SpriteRenderer:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   m_EquippedWeapon: {fileID: 0}
-  WeaponPrefab: {fileID: 4442941892304160643, guid: 07a8c80e2135cf94daca32f3eda5a175, type: 3}
+  WeaponPrefab: {fileID: 6486627467685014179, guid: ae00a017843cb4c4c8292f8139183811, type: 3}
 --- !u!95 &1731917652491408891
 Animator:
   serializedVersion: 4
@@ -171,7 +171,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &596481810704732523
+--- !u!114 &709620721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5137086857374516954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56c24bead8402ca4c9da4804a65f43cc, type: 3}
+  m_Script: {fileID: 11500000, guid: c2aee49d6d42cfb4b87466628587e7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  m_MaxHealth: 100

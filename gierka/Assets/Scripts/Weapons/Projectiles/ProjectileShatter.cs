@@ -23,7 +23,7 @@ public class ProjectileShatter : ProjectileContact
     public override void OnContact(Projectile self, Collision2D other)
     {
         if (other.gameObject.tag == "Enemy")
-            other.gameObject.GetComponent<Enemy>().UpdateHealth(-self.OwningWeapon.attackDamage);
+            other.gameObject.GetComponent<Health>().UpdateHealth(-self.OwningWeapon.attackDamage);
 
         float step;
         if (m_ProjectileCount == 0)

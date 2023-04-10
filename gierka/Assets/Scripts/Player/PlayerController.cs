@@ -16,16 +16,20 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     protected GameObject WeaponPrefab;
+    protected PlayerHealth health;
     
     void Start()
     {
         m_Body = GetComponent<Rigidbody2D>();
         m_Animator = GetComponent<Animator>();
+        health = GetComponent<PlayerHealth>();
     }
 
     void Update()
     {
-        
+        if (health.isDead)  
+            return;
+
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         //Debug.Log(horizontal);

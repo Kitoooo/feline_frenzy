@@ -126,6 +126,7 @@ MonoBehaviour:
   m_ProjectileContactBehaviourPrefabs:
   - {fileID: 7543876336664797687, guid: 726d73ad7d3a29e49a1cccd34ee3f68a, type: 3}
   - {fileID: 7188763316694279462, guid: 85205263f27182b4ab5a719f90b865f7, type: 3}
+  m_DamageIndicatorPrefab: {fileID: 3419559236437000355, guid: 6f7d6f3d874e3144fa97826d52000d83, type: 3}
   lastVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &6705597400142829332
 MonoBehaviour:

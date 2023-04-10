@@ -38,7 +38,9 @@ public class ProjectileExplosion : ProjectileContact
         Collider2D[] ObjectsInExplosion = Physics2D.OverlapCircleAll(transform.position, m_ExplosionRadius, m_LayerToCheck);
         foreach (Collider2D obj in ObjectsInExplosion)
         {
-            obj.gameObject.GetComponent<Enemy>().UpdateHealth(-self.OwningWeapon.attackDamage);
+            obj.gameObject.GetComponent<Health>().UpdateHealth(-self.OwningWeapon.attackDamage);
+            if(obj.gameObject.tag == "Enemy")
+                CreateDamageIndicator(self, obj.transform);
         }
         
         self.markForDestroyFlags["BasicHit"] = true;

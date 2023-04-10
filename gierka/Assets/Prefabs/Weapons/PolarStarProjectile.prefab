@@ -149,10 +149,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1000
   speed: 600
-  m_ProjectileContactBehaviourPrefab: {fileID: 247503026451083531, guid: 195e28cc1a9d04f4c9b1c4c7b5a88b65, type: 3}
   m_ProjectileContactBehaviourPrefabs:
   - {fileID: 247503026451083531, guid: 195e28cc1a9d04f4c9b1c4c7b5a88b65, type: 3}
-  lastVelocity: {x: 0, y: 0, z: 0}
+  - {fileID: 2483310098706345734, guid: b653dda63ec79a843929bea03dd5bd04, type: 3}
 --- !u!114 &3533003789003434878
 MonoBehaviour:
   m_ObjectHideFlags: 0

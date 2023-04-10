@@ -34,4 +34,10 @@ public class PlayerDetector : MonoBehaviour
             m_Enemy.onPlayerLost();
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+            m_Enemy.onPlayerStay();
+    }
 }

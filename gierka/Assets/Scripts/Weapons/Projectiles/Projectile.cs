@@ -15,6 +15,8 @@ public class Projectile : MonoBehaviour
     protected List<GameObject> m_ProjectileContactBehaviourPrefabs;
     public WeaponBase OwningWeapon { get; set; }
 
+    
+
     private string[] m_TagsToIgnore = { "Player","PlayerProjectile","Weapon" };
     public string[] TagsToIgnore { get { return m_TagsToIgnore; } }
 
@@ -24,7 +26,7 @@ public class Projectile : MonoBehaviour
     //to prevent destruction on contact at least one script has to set its flag to false
     public Dictionary<string, bool> markForDestroyFlags { get; protected set; }
 
-    public Vector3 lastVelocity;
+    protected Vector3 lastVelocity;
 
     void Awake()
     {
@@ -59,7 +61,7 @@ public class Projectile : MonoBehaviour
     //check if not owner
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Collision with: "+ other.gameObject.tag);
+        //Debug.Log("Collision with: "+ other.gameObject.tag);
         if (m_TagsToIgnore.Contains(other.gameObject.tag))
         {
             return;
@@ -74,7 +76,7 @@ public class Projectile : MonoBehaviour
                 contactBehaviour.lastVelocity = lastVelocity;
                 contactBehaviour.OnContact(this, other);
             }
-           
+
         }
     }
 

@@ -150,9 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8190b5c42174a874d9705f960812956c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 2
-  attackDamage: 20
-  m_TriggerType: 0
+  attackSpeed: 5
+  attackDamage: 1
+  m_TriggerType: 1
   orbitRadius: 1
   pointAtCursor: 0
   projectilePrefab: {fileID: 1751923687604028972, guid: 05ff27e0d5d8e9b44852738347bf9b03, type: 3}
