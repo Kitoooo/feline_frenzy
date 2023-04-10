@@ -5,7 +5,6 @@ using UnityEngine;
 public class CabalistsTomeController : WeaponBase
 {
     public GameObject projectilePrefab;
-    public Transform firePoint;
     protected Animator m_Animator;
     protected float m_AnimationChangeDelay;
     protected float m_TimeSinceLastAnimationChange = 0.0f;

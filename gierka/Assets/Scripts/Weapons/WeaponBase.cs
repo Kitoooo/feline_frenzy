@@ -18,6 +18,7 @@ abstract public class WeaponBase : MonoBehaviour
 
     [SerializeField]
     public float attackDamage;
+    public Transform firePoint;
 
     [SerializeField]
     protected WeaponTriggerType m_TriggerType;
@@ -31,7 +32,7 @@ abstract public class WeaponBase : MonoBehaviour
     public float orbitRadius = 1;
     public bool pointAtCursor = false;
 
-    protected void Update() 
+    protected void Update()
     {
         if (m_AttackSpeedTimer > 0.0f)
         {
@@ -47,13 +48,13 @@ abstract public class WeaponBase : MonoBehaviour
     //to allow enemies to use weapons add || Owner.tags.contains(enemy) to every if
     public void checkTrigger()
     {
-        if (m_AttackSpeedTimer<=0.0f)
+        if (m_AttackSpeedTimer <= 0.0f)
         {
             bool attacked = false;
-            switch(m_TriggerType)
+            switch (m_TriggerType)
             {
                 case WeaponTriggerType.Auto:
-                    if(Input.GetMouseButton(0))
+                    if (Input.GetMouseButton(0))
                     {
                         Attack();
                         attacked = true;
@@ -75,7 +76,7 @@ abstract public class WeaponBase : MonoBehaviour
                     }
                     break;
             }
-            if(attacked)
+            if (attacked)
             {
                 m_AttackSpeedTimer = 1 / attackSpeed;
             }
@@ -86,17 +87,16 @@ abstract public class WeaponBase : MonoBehaviour
 
     protected void OrbitOwner()
     {
-        if(m_Owner)
+        if (m_Owner)
         {
-            Vector3 mousePosition = Input.mousePosition;
-            mousePosition.x -= Screen.width / 2;
-            mousePosition.y -= Screen.height / 2;
-            Vector3 direction = mousePosition - m_Owner.transform.position;
-            direction = direction.normalized * new Vector2(orbitRadius, orbitRadius);
-
+            Vector2 ownerPosition = m_Owner.transform.position;
+            Vector2 mousePosition = Input.mousePosition;
+            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            Vector2 direction = (mousePosition - ownerPosition).normalized * orbitRadius;
+            //Debug.DrawRay(mousePosition, m_Owner.transform.position,Color.green);
             var renderer = m_Owner.GetComponent<Renderer>();
-            Vector3 offset = new Vector3(0, renderer.bounds.size.y / 4, 0);
-            transform.position = m_Owner.transform.position + direction + offset;
+            Vector2 offset = new Vector2(0, renderer.bounds.size.y / 4);
+            transform.position = ownerPosition + offset + direction;
 
             if (pointAtCursor)
             {
@@ -124,13 +124,14 @@ abstract public class WeaponBase : MonoBehaviour
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
             }
-            m_AttackDirection = direction.normalized;
+            Vector2 fp = firePoint.position;
+            m_AttackDirection = (mousePosition - fp).normalized;
         }
     }
 
     private IEnumerator BurstFire(float delay)
     {
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
         {
             Attack();
             yield return new WaitForSeconds(delay);

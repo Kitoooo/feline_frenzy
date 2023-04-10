@@ -52,7 +52,6 @@ public class BoarController : Enemy
         else if(!isCharging)
         {
             isCharging = true;
-            m_ChargeStart = transform.position;
             m_ChargeDestination = m_Target.position;
             //m_Animator.SetBool("isRunning", false);
             
@@ -77,6 +76,7 @@ public class BoarController : Enemy
         yield return new WaitForSeconds(m_ChargePreparationTime);
         if(m_Target != null)
             m_ChargeDestination = m_Target.position;
+        m_ChargeStart = transform.position;
 
         m_Animator.SetBool("isPreparingCharge", false);
         elapsedTime = 0.0f;
@@ -107,6 +107,7 @@ public class BoarController : Enemy
 
     float easeOutQuart(float x) 
     {
-        return 1 - Mathf.Pow(1 - x, 4);
+        //return 1 - Mathf.Pow(1 - x, 4);
+        return x;
     }
 }

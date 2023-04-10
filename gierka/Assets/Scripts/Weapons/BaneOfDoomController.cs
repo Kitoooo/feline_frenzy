@@ -5,7 +5,6 @@ using UnityEngine;
 public class BaneOfDoomController : WeaponBase
 {
     public GameObject projectilePrefab;
-    public Transform firePoint;
 
     public override GameObject AbstractProjectilePrefab => throw new System.NotImplementedException();
 

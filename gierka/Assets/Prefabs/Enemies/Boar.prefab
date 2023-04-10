@@ -36,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 7950458375799414516}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6274246651396680825
 SpriteRenderer:
@@ -102,8 +102,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDrag: 2.5
+  m_Mass: 10
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -154,14 +154,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6fe35c798e10854d9d24330b06d1606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 4
   attackDamage: 10
   attackSpeed: 1
-  m_ChargeRange: 8
-  m_ChargePreparationTime: 2.3
-  m_ChargeDuration: 1.7
-  m_ChargeRecoveryTime: 2.5
-  m_ChargeDamage: 1
+  m_ChargeRange: 5
+  m_ChargePreparationTime: 1.3
+  m_ChargeDuration: 0.7
+  m_ChargeRecoveryTime: 4
+  m_ChargeDamage: 69
 --- !u!95 &2652323372232929437
 Animator:
   serializedVersion: 4
