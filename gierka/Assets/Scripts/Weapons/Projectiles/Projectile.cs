@@ -9,11 +9,9 @@ public class Projectile : MonoBehaviour
     public float range = 1000.0f;
     [SerializeField] 
     public float speed = 300;
-    //[SerializeField]
-    //protected GameObject m_ProjectileContactBehaviourPrefab;
     [SerializeField]
     protected List<GameObject> m_ProjectileContactBehaviourPrefabs;
-    public WeaponBase OwningWeapon { get; set; }
+    public Weapon OwningWeapon { get; set; }
 
     
 

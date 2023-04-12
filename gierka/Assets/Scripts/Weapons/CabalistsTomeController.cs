@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CabalistsTomeController : WeaponBase
+public class CabalistsTomeController : Weapon
 {
-    public GameObject projectilePrefab;
     protected Animator m_Animator;
     protected float m_AnimationChangeDelay;
     protected float m_TimeSinceLastAnimationChange = 0.0f;
-
-    public override GameObject AbstractProjectilePrefab{ get { return projectilePrefab; }}
     protected override void Start()
     {
         base.Start();

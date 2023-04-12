@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     protected float horizontal;
     protected float vertical;
     protected bool m_Moving = false;
-    public WeaponBase m_EquippedWeapon;
+    public Weapon m_EquippedWeapon;
 
     [SerializeField]
     protected GameObject WeaponPrefab;
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
     public void EquipWeapon()
     {
         GameObject newWeapon = Instantiate(WeaponPrefab, m_Body.position, Quaternion.identity);
-        m_EquippedWeapon = newWeapon.GetComponent<WeaponBase>();
+        m_EquippedWeapon = newWeapon.GetComponent<Weapon>();
         m_EquippedWeapon.Owner = this;
         Debug.Log("Weapon Equiped");
     }

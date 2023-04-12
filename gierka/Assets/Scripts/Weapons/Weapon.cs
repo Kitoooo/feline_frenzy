@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-abstract public class WeaponBase : MonoBehaviour
+abstract public class Weapon : MonoBehaviour
 {
-    //xddddddddddddddddddddddddddddddddddddddddddddddd
-    public abstract GameObject AbstractProjectilePrefab { get; }
     //holds reference to weapon owner
     protected PlayerController m_Owner;
     //used by projectiles to determine where to move
@@ -19,6 +17,7 @@ abstract public class WeaponBase : MonoBehaviour
     [SerializeField]
     public float attackDamage;
     public Transform firePoint;
+    public GameObject projectilePrefab;
 
     [SerializeField]
     protected WeaponTriggerType m_TriggerType;

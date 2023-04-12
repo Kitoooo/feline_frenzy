@@ -2,12 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PolarStarController : WeaponBase
+public class PolarStarController : Weapon
 {
-    public GameObject projectilePrefab;
-
-    public override GameObject AbstractProjectilePrefab => throw new System.NotImplementedException();
-
     // Update is called once per frame
     protected new void Update()
     {

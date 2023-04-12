@@ -2,14 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaneOfDoomController : WeaponBase
+public class BaneOfDoomController : Weapon
 {
-    public GameObject projectilePrefab;
-
-    public override GameObject AbstractProjectilePrefab => throw new System.NotImplementedException();
-
-   
-
     protected new void Update()
     {
         base.Update();

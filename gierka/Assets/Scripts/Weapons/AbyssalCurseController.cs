@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbyssalCurseController : WeaponBase
+public class AbyssalCurseController : Weapon
 {
-    public override GameObject AbstractProjectilePrefab => throw new System.NotImplementedException();
-    public GameObject projectilePrefab;
-
     [SerializeField]
     [Min(2)]
     protected int m_MaxTentacles;
@@ -47,7 +44,6 @@ public class AbyssalCurseController : WeaponBase
         {
             tentacle.allowForDamageTick = true;
         }
-        print("ATTACK!");
     }
 
 

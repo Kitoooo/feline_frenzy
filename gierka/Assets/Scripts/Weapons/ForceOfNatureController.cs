@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ForceOfNatureController : WeaponBase
+public class ForceOfNatureController : Weapon
 {
-    public GameObject projectilePrefab;
-    
-    public override GameObject AbstractProjectilePrefab{ get { return projectilePrefab; }}
     protected override void Start()
     {
         base.Start();
