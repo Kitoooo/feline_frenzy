@@ -9,7 +9,14 @@ public abstract class ProjectileContact : MonoBehaviour
 
     [SerializeField]
     protected GameObject m_DamageIndicatorPrefab;
-    public abstract void OnContact(Projectile self, Collision2D other);
+    public virtual void OnContact(Projectile self, Collision2D other)
+    {
+        throw new System.NotImplementedException();
+    }
+    public virtual void OnContact(Projectile self, Collider2D other)
+    {
+        throw new System.NotImplementedException();
+    }
 
     protected void CreateDamageIndicator(Projectile self,Transform position)
     {

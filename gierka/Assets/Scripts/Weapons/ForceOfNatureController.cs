@@ -7,8 +7,9 @@ public class ForceOfNatureController : WeaponBase
     public GameObject projectilePrefab;
     
     public override GameObject AbstractProjectilePrefab{ get { return projectilePrefab; }}
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         orbitRadius = 1.0f;
     }
 

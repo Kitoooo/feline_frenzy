@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1374553847
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1897437536, guid: ecdfa2d936f0a5e429169b983e1cce31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -126,8 +126,6 @@ MonoBehaviour:
   m_ProjectileContactBehaviourPrefabs:
   - {fileID: 7543876336664797687, guid: 726d73ad7d3a29e49a1cccd34ee3f68a, type: 3}
   - {fileID: 7188763316694279462, guid: 85205263f27182b4ab5a719f90b865f7, type: 3}
-  m_DamageIndicatorPrefab: {fileID: 3419559236437000355, guid: 6f7d6f3d874e3144fa97826d52000d83, type: 3}
-  lastVelocity: {x: 0, y: 0, z: 0}
 --- !u!114 &6705597400142829332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7848f9ebf04f01d4db72a55d387a965e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_DamageIndicatorPrefab: {fileID: 0}
 --- !u!50 &1414703912663295919
 Rigidbody2D:
   serializedVersion: 4

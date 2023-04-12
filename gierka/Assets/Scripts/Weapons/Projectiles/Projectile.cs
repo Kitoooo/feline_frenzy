@@ -28,14 +28,14 @@ public class Projectile : MonoBehaviour
 
     protected Vector3 lastVelocity;
 
-    void Awake()
+    protected virtual void Awake()
     {
         m_Body = GetComponent<Rigidbody2D>();
         contactStorage = new Dictionary<string, object>();
         markForDestroyFlags = new Dictionary<string, bool>();
     }
 
-    void Update()
+    protected virtual void Update()
     {
         bool marked = true;
         foreach(var flag in markForDestroyFlags)
@@ -58,17 +58,44 @@ public class Projectile : MonoBehaviour
         m_Body.AddForce(direction * speed);
     }
 
-    //check if not owner
+    /*
+     *
+     * I DONT KNOW HOW TO DO IT BETTER SORRY
+     *
+     */
     private void OnCollisionEnter2D(Collision2D other)
     {
-        //Debug.Log("Collision with: "+ other.gameObject.tag);
+        CheckContact(other);
+    }
+
+    protected void CheckContact(Collision2D other)
+    {
         if (m_TagsToIgnore.Contains(other.gameObject.tag))
         {
             return;
         }
-        else 
+        else
         {
-            foreach(GameObject projectileContactBehaviourPrefab in m_ProjectileContactBehaviourPrefabs)
+            foreach (GameObject projectileContactBehaviourPrefab in m_ProjectileContactBehaviourPrefabs)
+            {
+                GameObject projectileContactBehaviour = Instantiate(projectileContactBehaviourPrefab, transform.position, Quaternion.identity);
+
+                ProjectileContact contactBehaviour = projectileContactBehaviour.GetComponent<ProjectileContact>();
+                contactBehaviour.lastVelocity = lastVelocity;
+                contactBehaviour.OnContact(this, other);
+            }
+
+        }
+    }
+    protected void CheckContact(Collider2D other)
+    {
+        if (m_TagsToIgnore.Contains(other.gameObject.tag))
+        {
+            return;
+        }
+        else
+        {
+            foreach (GameObject projectileContactBehaviourPrefab in m_ProjectileContactBehaviourPrefabs)
             {
                 GameObject projectileContactBehaviour = Instantiate(projectileContactBehaviourPrefab, transform.position, Quaternion.identity);
 

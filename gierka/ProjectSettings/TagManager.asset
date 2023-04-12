@@ -22,7 +22,7 @@ TagManager:
   - Enemies
   - Projectiles
   - Detectors
-  - 
+  - NoCollision
   - 
   - 
   - 
@@ -42,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Characters
+    uniqueID: 191765377
+    locked: 0
+  - name: Projectiles
+    uniqueID: 2920413449
+    locked: 0
+  - name: Weapons
+    uniqueID: 255722385
+    locked: 0
+  - name: ProjectileEffects
+    uniqueID: 2045021893
     locked: 0

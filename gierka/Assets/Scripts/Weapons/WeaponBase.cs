@@ -31,8 +31,14 @@ abstract public class WeaponBase : MonoBehaviour
 
     public float orbitRadius = 1;
     public bool pointAtCursor = false;
+    public bool attacked { get; protected set; }
 
-    protected void Update()
+    protected virtual void Start()
+    {
+        attacked = false;
+    }
+
+    protected virtual void Update()
     {
         if (m_AttackSpeedTimer > 0.0f)
         {
@@ -50,7 +56,7 @@ abstract public class WeaponBase : MonoBehaviour
     {
         if (m_AttackSpeedTimer <= 0.0f)
         {
-            bool attacked = false;
+            attacked = false;
             switch (m_TriggerType)
             {
                 case WeaponTriggerType.Auto:
@@ -73,6 +79,18 @@ abstract public class WeaponBase : MonoBehaviour
                     {
                         Attack();
                         attacked = true;
+                    }
+                    break;
+                case WeaponTriggerType.Hold:
+                    if (Input.GetMouseButton(0))
+                    {
+                        Attack();
+                        attacked = true;
+                    }
+                    else
+                    {
+                        attacked = false;
+
                     }
                     break;
             }
@@ -100,8 +118,8 @@ abstract public class WeaponBase : MonoBehaviour
 
             if (pointAtCursor)
             {
-                float dot = Vector2.Dot(Vector2.left, direction);
-                float det = Vector2.left.x * direction.y - Vector2.left.y * direction.x;
+                float dot = Vector2.Dot(Vector2.right, direction);
+                float det = Vector2.right.x * direction.y - Vector2.right.y * direction.x;
                 float rotationZ = Mathf.Atan2(det, dot);
                 rotationZ = rotationZ * Mathf.Rad2Deg;
                 rotationZ += 90;
@@ -142,6 +160,7 @@ abstract public class WeaponBase : MonoBehaviour
     {
         Auto,
         Burst,
-        SemiAuto
+        SemiAuto,
+        Hold
     }
 }

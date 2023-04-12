@@ -104,8 +104,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 255722385
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1185423515, guid: be359d058a1adec4fa1cd072038e7858, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -152,8 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackSpeed: 5
   attackDamage: 1
+  firePoint: {fileID: 4989242141706187297}
   m_TriggerType: 1
   orbitRadius: 1
   pointAtCursor: 0
   projectilePrefab: {fileID: 1751923687604028972, guid: 05ff27e0d5d8e9b44852738347bf9b03, type: 3}
-  firePoint: {fileID: 4989242141706187297}
