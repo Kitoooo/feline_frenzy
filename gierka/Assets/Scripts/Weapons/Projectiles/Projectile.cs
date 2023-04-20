@@ -56,6 +56,20 @@ public class Projectile : MonoBehaviour
         m_Body.AddForce(direction * speed);
     }
 
+    public void DealDamageTo(GameObject enemy)
+    {
+        float critChance = OwningWeapon.m_CriticalChance / 100;
+        uint critTier = (uint) critChance;
+        float chanceForNextTimer = critChance - (int)critChance;
+        float roll = Random.value;
+        if (chanceForNextTimer >= roll)
+            critTier++;
+
+        float finalDamage = OwningWeapon.attackDamage + OwningWeapon.attackDamage * OwningWeapon.m_CriticalMultiplier * critTier;
+        enemy.GetComponent<Health>().UpdateHealth(-finalDamage);
+        DamageIndicatorFactory.Instance.CreateDamageIndicator(finalDamage,critTier,enemy.transform);
+    }
+
     /*
      *
      * I DONT KNOW HOW TO DO IT BETTER SORRY

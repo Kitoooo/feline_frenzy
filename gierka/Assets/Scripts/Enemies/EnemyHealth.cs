@@ -47,5 +47,6 @@ public class EnemyHealth : Health
     protected override void onDamageTaken()
     {
         m_Animator.SetTrigger("Hit");
+        
     }
 }

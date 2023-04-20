@@ -49,6 +49,13 @@ public class AbyssalCurseController : Weapon
 
     protected void ExtendTentacles()
     {
+        if (m_Tentacles[0].isExtended)
+            return;
+        foreach (var tentacle in m_Tentacles)
+        {
+            tentacle.Extend();
+        }
+        /*
         if (currentTentacleIndex >= m_Tentacles.Count)
             return;
 
@@ -57,9 +64,17 @@ public class AbyssalCurseController : Weapon
             current.Extend();
         else if(current.isExtended && currentTentacleIndex < m_Tentacles.Count-1)
             currentTentacleIndex += 1;
+        */
     }
     protected void RetractTentacles()
     {
+        if (m_Tentacles[0].isRetracted)
+            return;
+        foreach (var tentacle in m_Tentacles)
+        {
+            tentacle.Retract();
+        }
+        /*
         if (currentTentacleIndex < 0) 
             return;
 
@@ -68,5 +83,6 @@ public class AbyssalCurseController : Weapon
             current.Retract();
         else if (current.isRetracted && currentTentacleIndex > 0)
             currentTentacleIndex -= 1;
+        */
     }
 }
