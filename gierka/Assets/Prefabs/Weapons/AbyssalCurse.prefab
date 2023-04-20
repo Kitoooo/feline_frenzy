@@ -122,10 +122,14 @@ MonoBehaviour:
   attackSpeed: 3
   attackDamage: 1
   firePoint: {fileID: 4991161227311774727}
+  projectilePrefab: {fileID: 6212804398575254365, guid: ddcdbb979165a07458edb0615db0cdd2, type: 3}
   m_TriggerType: 3
   orbitRadius: 2
   pointAtCursor: 0
-  projectilePrefab: {fileID: 6212804398575254365, guid: ddcdbb979165a07458edb0615db0cdd2, type: 3}
+  m_CriticalChance: 0
+  m_CriticalMultiplier: 0
+  m_BaseCriticalChance: 240
+  m_BaseCriticalMultiplier: 2
   m_MaxTentacles: 5
 --- !u!1 &7832832996758925558
 GameObject:

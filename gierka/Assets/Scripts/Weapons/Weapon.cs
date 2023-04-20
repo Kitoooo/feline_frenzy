@@ -32,9 +32,18 @@ abstract public class Weapon : MonoBehaviour
     public bool pointAtCursor = false;
     public bool attacked { get; protected set; }
 
+    [HideInInspector]
+    public float m_CriticalChance;
+    [HideInInspector]
+    public float m_CriticalMultiplier;
+    public float m_BaseCriticalChance;
+    public float m_BaseCriticalMultiplier;
+
     protected virtual void Start()
     {
         attacked = false;
+        m_CriticalChance = m_BaseCriticalChance;
+        m_CriticalMultiplier = m_BaseCriticalMultiplier;
     }
 
     protected virtual void Update()
@@ -162,4 +171,6 @@ abstract public class Weapon : MonoBehaviour
         SemiAuto,
         Hold
     }
+
+
 }

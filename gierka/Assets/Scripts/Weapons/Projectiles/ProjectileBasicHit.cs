@@ -8,10 +8,8 @@ public class ProjectileBasicHit : ProjectileContact
     public override void OnContact(Projectile self, Collision2D other) 
     {
         if (other.gameObject.tag == "Enemy")
-        {
-            other.gameObject.GetComponent<Health>().UpdateHealth(-self.OwningWeapon.attackDamage);
-            CreateDamageIndicator(self, other.transform);
-        }
+            self.DealDamageTo(other.gameObject);
+
         //Destroy(self.gameObject);
         Destroy(gameObject);
         self.markForDestroyFlags["BasicHit"] = true;
@@ -19,10 +17,8 @@ public class ProjectileBasicHit : ProjectileContact
     public override void OnContact(Projectile self, Collider2D other)
     {
         if (other.gameObject.tag == "Enemy")
-        {
-            other.gameObject.GetComponent<Health>().UpdateHealth(-self.OwningWeapon.attackDamage);
-            CreateDamageIndicator(self, other.transform);
-        }
+            self.DealDamageTo(other.gameObject);
+
         //Destroy(self.gameObject);
         Destroy(gameObject);
         self.markForDestroyFlags["BasicHit"] = true;

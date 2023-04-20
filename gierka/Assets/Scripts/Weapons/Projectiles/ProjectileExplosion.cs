@@ -36,11 +36,13 @@ public class ProjectileExplosion : ProjectileContact
     public override void OnContact(Projectile self, Collision2D other)
     {
         Collider2D[] ObjectsInExplosion = Physics2D.OverlapCircleAll(transform.position, m_ExplosionRadius, m_LayerToCheck);
+        print(ObjectsInExplosion.Length);
         foreach (Collider2D obj in ObjectsInExplosion)
         {
-            obj.gameObject.GetComponent<Health>().UpdateHealth(-self.OwningWeapon.attackDamage);
-            if(obj.gameObject.tag == "Enemy")
-                CreateDamageIndicator(self, obj.transform);
+            if (obj.gameObject.tag == "Enemy")
+            {
+                self.DealDamageTo(obj.gameObject);
+            }
         }
         
         self.markForDestroyFlags["BasicHit"] = true;
