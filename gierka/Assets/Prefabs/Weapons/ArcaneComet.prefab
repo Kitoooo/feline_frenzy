@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &761365854594037353
+--- !u!1 &6463767985379664682
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2159885271654114938}
-  - component: {fileID: 704291747722529267}
-  - component: {fileID: 2824613653269696716}
-  - component: {fileID: 5659302133299055485}
+  - component: {fileID: 6463767985379664684}
+  - component: {fileID: 6463767985379664685}
+  - component: {fileID: 3745945505968092661}
   m_Layer: 0
-  m_Name: AbyssalCurse
+  m_Name: ArcaneComet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2159885271654114938
+--- !u!4 &6463767985379664684
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761365854594037353}
+  m_GameObject: {fileID: 6463767985379664682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.68, y: -42.05, z: 0}
+  m_LocalPosition: {x: -65.46028, y: -43.22089, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4991161227311774727}
+  - {fileID: 2728455651683422261}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &704291747722529267
+--- !u!212 &6463767985379664685
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761365854594037353}
+  m_GameObject: {fileID: 6463767985379664682}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,62 +75,43 @@ SpriteRenderer:
   m_SortingLayerID: 255722385
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1375179878, guid: e54c8009876c4014092ae830c3a7c7ca, type: 3}
+  m_Sprite: {fileID: 1408686529, guid: cdf83403060871341956b37c8d7a87ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.32, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2824613653269696716
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761365854594037353}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a8c87467ba5933f4f9da88f8752d3377, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5659302133299055485
+--- !u!114 &3745945505968092661
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761365854594037353}
+  m_GameObject: {fileID: 6463767985379664682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49766d516509eab48b07234adc2663c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c0f1f01a37139c4baf4ad0c2765a5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackSpeed: 3
   attackDamage: 10
-  firePoint: {fileID: 4991161227311774727}
-  projectilePrefab: {fileID: 6212804398575254365, guid: ddcdbb979165a07458edb0615db0cdd2, type: 3}
-  m_TriggerType: 3
-  orbitRadius: 2
+  firePoint: {fileID: 2728455651683422261}
+  projectilePrefab: {fileID: 1285495949735067593, guid: 697e5b8ae8fc0c84baa2788befe726d3, type: 3}
+  m_TriggerType: 0
+  orbitRadius: 1.5
   pointAtCursor: 0
+  angleToOwner: 0
+  test: 0
   m_CriticalChance: 0
   m_CriticalMultiplier: 0
-  m_BaseCriticalChance: 240
-  m_BaseCriticalMultiplier: 2
-  m_MaxTentacles: 5
---- !u!1 &7832832996758925558
+  m_BaseCriticalChance: 0
+  m_BaseCriticalMultiplier: 0
+--- !u!1 &9042328971422715896
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,7 +119,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4991161227311774727}
+  - component: {fileID: 2728455651683422261}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -147,18 +127,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4991161227311774727
+--- !u!4 &2728455651683422261
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7832832996758925558}
+  m_GameObject: {fileID: 9042328971422715896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.188, y: 0.141, z: 0}
+  m_LocalPosition: {x: 0, y: 0.094, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2159885271654114938}
+  m_Father: {fileID: 6463767985379664684}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

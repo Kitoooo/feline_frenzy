@@ -149,7 +149,4 @@ MonoBehaviour:
   range: 200
   speed: 400
   m_ProjectileContactBehaviourPrefabs:
-  - {fileID: 7543876336664797687, guid: 726d73ad7d3a29e49a1cccd34ee3f68a, type: 3}
-  - {fileID: 7188763316694279462, guid: 85205263f27182b4ab5a719f90b865f7, type: 3}
-  - {fileID: 2059230604314650334, guid: 0dabaef98b16e444cabf6ea45d554fda, type: 3}
   - {fileID: 2483310098706345734, guid: b653dda63ec79a843929bea03dd5bd04, type: 3}

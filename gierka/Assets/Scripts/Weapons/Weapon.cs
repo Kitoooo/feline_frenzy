@@ -30,6 +30,8 @@ abstract public class Weapon : MonoBehaviour
 
     public float orbitRadius = 1;
     public bool pointAtCursor = false;
+    public float angleToOwner;
+    public float test;
     public bool attacked { get; protected set; }
 
     [HideInInspector]
@@ -124,24 +126,24 @@ abstract public class Weapon : MonoBehaviour
             Vector2 offset = new Vector2(0, renderer.bounds.size.y / 4);
             transform.position = ownerPosition + offset + direction;
 
+            //angle to owner, 0-360
+            float dot = Vector2.Dot(Vector2.left, direction);
+            float det = Vector2.left.x * direction.y - Vector2.left.y * direction.x;
+            float rotationZ = Mathf.Atan2(det, dot);
+            rotationZ = rotationZ * Mathf.Rad2Deg + 180;
+
+            angleToOwner = rotationZ;
             if (pointAtCursor)
             {
-                float dot = Vector2.Dot(Vector2.right, direction);
-                float det = Vector2.right.x * direction.y - Vector2.right.y * direction.x;
-                float rotationZ = Mathf.Atan2(det, dot);
-                rotationZ = rotationZ * Mathf.Rad2Deg;
-                rotationZ += 90;
-
                 transform.eulerAngles = new Vector3(
                     transform.eulerAngles.x,
                     transform.eulerAngles.y,
-                    rotationZ
+                    rotationZ + 90
                 );
             }
             else
             {
-                float angle = Vector3.Angle(Vector3.right, direction);
-                if (angle < 90)
+                if (Mathf.Abs(angleToOwner-180) > 90)
                 {
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                 }
