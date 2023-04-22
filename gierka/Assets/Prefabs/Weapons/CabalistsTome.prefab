@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3966127312371611307}
   - component: {fileID: 5416036345549589782}
   - component: {fileID: 4159999520128685219}
+  - component: {fileID: 1930327066392535293}
   m_Layer: 0
   m_Name: CabalistsTome
   m_TagString: Untagged
@@ -64,7 +65,7 @@ Transform:
   m_Children:
   - {fileID: 544449966}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3966127312371611307
 SpriteRenderer:
@@ -157,7 +158,26 @@ MonoBehaviour:
   m_TriggerType: 0
   orbitRadius: 1
   pointAtCursor: 0
+  angleToOwner: 0
   m_CriticalChance: 0
   m_CriticalMultiplier: 0
   m_BaseCriticalChance: 75
   m_BaseCriticalMultiplier: 1.5
+--- !u!114 &1930327066392535293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966127312371611306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd9b9a190aa1ba41ac61ea09d7f619e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinTimeBetweenAnimations: 2
+  m_MaxTimeBetweenAnimations: 4
+  m_NumberOfAnimations: 3
+  triggerName: PlayIdleAnimation
+  AnimatorFloatName: AnimationNumber
+  m_OnwerAnimator: {fileID: 5416036345549589782}

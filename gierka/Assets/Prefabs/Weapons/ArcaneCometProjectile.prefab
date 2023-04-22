@@ -113,11 +113,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72ae4fe76047854fb88629ab9c4eaff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 1000
+  range: 3000
   speed: 600
   m_ProjectileContactBehaviourPrefabs:
   - {fileID: 2483310098706345734, guid: b653dda63ec79a843929bea03dd5bd04, type: 3}
-  OrbitSpeed: 2
+  - {fileID: 7707857648081920396, guid: d662d91ed862f5541818d76077d7788b, type: 3}
 --- !u!58 &-4921846483329048724
 CircleCollider2D:
   m_ObjectHideFlags: 0

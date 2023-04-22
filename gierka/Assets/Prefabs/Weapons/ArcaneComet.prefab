@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6463767985379664684}
   - component: {fileID: 6463767985379664685}
   - component: {fileID: 3745945505968092661}
+  - component: {fileID: 6968382743912628242}
+  - component: {fileID: 620990172693297554}
   m_Layer: 0
   m_Name: ArcaneComet
   m_TagString: Untagged
@@ -98,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0f1f01a37139c4baf4ad0c2765a5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 3
+  attackSpeed: 5
   attackDamage: 10
   firePoint: {fileID: 2728455651683422261}
   projectilePrefab: {fileID: 1285495949735067593, guid: 697e5b8ae8fc0c84baa2788befe726d3, type: 3}
@@ -106,11 +108,52 @@ MonoBehaviour:
   orbitRadius: 1.5
   pointAtCursor: 0
   angleToOwner: 0
-  test: 0
   m_CriticalChance: 0
   m_CriticalMultiplier: 0
-  m_BaseCriticalChance: 0
-  m_BaseCriticalMultiplier: 0
+  m_BaseCriticalChance: 25
+  m_BaseCriticalMultiplier: 2
+  minProjectileOrbit: 1.5
+  maxProjectileOrbit: 5
+  minProjectileSpeed: 2
+  maxProjectileSpeed: 5
+--- !u!95 &6968382743912628242
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6463767985379664682}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 118917e331ca57d40af5ccc939c99474, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &620990172693297554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6463767985379664682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd9b9a190aa1ba41ac61ea09d7f619e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinTimeBetweenAnimations: 2
+  m_MaxTimeBetweenAnimations: 4
+  m_NumberOfAnimations: 3
+  triggerName: PlayIdleAnimation
+  AnimatorFloatName: AnimationNumber
+  m_OnwerAnimator: {fileID: 6968382743912628242}
 --- !u!1 &9042328971422715896
 GameObject:
   m_ObjectHideFlags: 0
