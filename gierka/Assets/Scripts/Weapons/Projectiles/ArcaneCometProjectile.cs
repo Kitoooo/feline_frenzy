@@ -13,9 +13,9 @@ public class ArcaneCometProjectile : Projectile
     }
 
     // Update is called once per frame
-    protected override void Update()
+    protected void FixedUpdate()
     {
-        base.Update();
+        //base.Update();
         ArcaneCometController owner = (ArcaneCometController)OwningWeapon;
         speed = owner.currentProjectileSpeed;
         m_CurrentAngle += owner.currentProjectileSpeed * Mathf.Deg2Rad;

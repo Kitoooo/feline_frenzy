@@ -24,7 +24,7 @@ public class ArcaneCometController : Weapon
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.OwningWeapon = this;
-        projectile.Fire(m_AttackDirection);
+        //projectile.Fire(m_AttackDirection);
     }
 
     protected override void Start()

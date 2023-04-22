@@ -108,17 +108,14 @@ MonoBehaviour:
   orbitRadius: 1.5
   pointAtCursor: 0
   angleToOwner: 0
-  test: 0
   m_CriticalChance: 0
   m_CriticalMultiplier: 0
   m_BaseCriticalChance: 25
   m_BaseCriticalMultiplier: 2
   m_MinProjectileOrbit: 1.5
   m_MaxProjectileOrbit: 5
-  m_MinProjectileSpeed: 0.5
-  m_MaxProjectileSpeed: 1.5
-  currentProjectileOrbit: 0
-  currentProjectileSpeed: 0
+  m_MinProjectileSpeed: 2
+  m_MaxProjectileSpeed: 5
 --- !u!95 &6968382743912628242
 Animator:
   serializedVersion: 4
