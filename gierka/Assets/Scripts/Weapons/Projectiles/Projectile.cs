@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
 {
     public Rigidbody2D m_Body { get; protected set; }
     public float range = 1000.0f;
+    protected float m_DistanceTravelled = 0f;
     [SerializeField] 
     public float speed = 300;
     [SerializeField]
@@ -35,6 +36,7 @@ public class Projectile : MonoBehaviour
 
     protected virtual void Update()
     {
+        m_DistanceTravelled += speed * Time.deltaTime;
         bool marked = true;
         foreach(var flag in markForDestroyFlags)
         {
@@ -45,7 +47,7 @@ public class Projectile : MonoBehaviour
             }
         }
         lastVelocity = m_Body.velocity;
-        if (transform.position.magnitude > range || (marked && markForDestroyFlags.Count > 0))
+        if (m_DistanceTravelled > range || (marked && markForDestroyFlags.Count > 0))
         {
             Destroy(gameObject);
         }
@@ -67,7 +69,7 @@ public class Projectile : MonoBehaviour
 
         float finalDamage = OwningWeapon.attackDamage + OwningWeapon.attackDamage * OwningWeapon.m_CriticalMultiplier * critTier;
         enemy.GetComponent<Health>().UpdateHealth(-finalDamage);
-        DamageIndicatorFactory.Instance.CreateDamageIndicator(finalDamage,critTier,enemy.transform);
+        DamageIndicatorFactory.Instance.CreateDamageIndicator(finalDamage,critTier,enemy.transform);    
     }
 
     /*

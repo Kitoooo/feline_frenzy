@@ -31,7 +31,6 @@ abstract public class Weapon : MonoBehaviour
     public float orbitRadius = 1;
     public bool pointAtCursor = false;
     public float angleToOwner;
-    public float test;
     public bool attacked { get; protected set; }
 
     [HideInInspector]
@@ -122,8 +121,8 @@ abstract public class Weapon : MonoBehaviour
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
             Vector2 direction = (mousePosition - ownerPosition).normalized * orbitRadius;
             //Debug.DrawRay(mousePosition, m_Owner.transform.position,Color.green);
-            var renderer = m_Owner.GetComponent<Renderer>();
-            Vector2 offset = new Vector2(0, renderer.bounds.size.y / 4);
+            
+            Vector2 offset = new Vector2(0, m_Owner.m_Renderer.bounds.size.y / 4);
             transform.position = ownerPosition + offset + direction;
 
             //angle to owner, 0-360

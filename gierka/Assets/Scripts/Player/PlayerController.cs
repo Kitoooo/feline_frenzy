@@ -6,8 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     public float movementSpeed = 5.0f;
     protected Vector2 m_FacingDirection = Vector2.left;
-    protected Rigidbody2D m_Body;
-    protected Animator m_Animator;
+    public Rigidbody2D m_Body { get; protected set; }
+    public Renderer m_Renderer { get; protected set; }
+
+    public Animator m_Animator;
 
     protected float horizontal;
     protected float vertical;
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
         m_Body = GetComponent<Rigidbody2D>();
         m_Animator = GetComponent<Animator>();
         health = GetComponent<PlayerHealth>();
+        m_Renderer = GetComponent<Renderer>();
     }
 
     void Update()
