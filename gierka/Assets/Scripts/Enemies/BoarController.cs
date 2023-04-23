@@ -69,7 +69,14 @@ public class BoarController : Enemy
         m_Target = null;
         m_Animator.SetBool("isRunning", false);
     }
-    
+
+    public override void onPlayerStay()
+    {
+        //if(!isCharging)
+            base.onPlayerStay();
+    }
+
+
     protected IEnumerator Charge()
     {
         m_Animator.SetBool("isPreparingCharge", true);

@@ -142,6 +142,7 @@ MonoBehaviour:
   m_MaxHealth: 100
   m_DespawnTimer: 5
   m_FadeDuration: 1
+  m_DeathAnimationName: Death
 --- !u!114 &2548139768377537076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +158,7 @@ MonoBehaviour:
   movementSpeed: 4
   attackDamage: 10
   attackSpeed: 1
+  m_SpriteDirection: 0
   m_ChargeRange: 5
   m_ChargePreparationTime: 1.3
   m_ChargeDuration: 0.7

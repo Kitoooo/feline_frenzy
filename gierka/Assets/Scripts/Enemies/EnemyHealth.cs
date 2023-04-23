@@ -10,6 +10,8 @@ public class EnemyHealth : Health
     //fading animation after death
     [SerializeField]
     protected float m_FadeDuration = 1.0f;
+    [SerializeField]
+    protected string m_DeathAnimationName = "Death";
     protected SpriteRenderer m_SpriteRenderer;
     protected Animator m_Animator;
 
@@ -21,7 +23,8 @@ public class EnemyHealth : Health
 
     protected void Update()
     {
-        if (isDead)
+        var info = m_Animator.GetCurrentAnimatorStateInfo(0);
+        if (isDead && info.IsName(m_DeathAnimationName) && info.normalizedTime >= 1)
         {
             m_DespawnTimer -= Time.deltaTime;
             if (m_DespawnTimer <= 0)
@@ -32,6 +35,7 @@ public class EnemyHealth : Health
                 }
                 else
                 {
+                    onDestroy();
                     Destroy(gameObject);
                 }
             }
@@ -47,6 +51,10 @@ public class EnemyHealth : Health
     protected override void onDamageTaken()
     {
         m_Animator.SetTrigger("Hit");
+    }
+
+    protected virtual void onDestroy()
+    {
         
     }
 }

@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     protected Rigidbody2D m_Body;
     protected Animator m_Animator;
     protected EnemyHealth health;
+    [SerializeField]
+    protected SpriteDirection m_SpriteDirection = SpriteDirection.Right;
 
     public float m_Facing { get; protected set; }
 
@@ -62,8 +64,9 @@ public class Enemy : MonoBehaviour
     }
     public virtual void onPlayerStay()
     {
-        m_Facing = (m_Target.position.x - transform.position.x) > 0 ? 0 : 1;
-        transform.rotation = Quaternion.Euler(0, 180 * m_Facing, 0);
+        // 0 - right, 180 - left
+        m_Facing = (m_Target.position.x - transform.position.x) > 0 ? 0 : 180;
+        transform.rotation = Quaternion.Euler(0, m_Facing + (int)m_SpriteDirection, 0);
     }
 
     protected void OnCollisionStay2D(Collision2D collision)
@@ -83,3 +86,9 @@ public class Enemy : MonoBehaviour
     }
 }
 //https://answers.unity.com/questions/327412/prevent-rigidbody-to-be-pushed-away-by-bullet.html
+
+public enum SpriteDirection
+{
+    Right = 0,
+    Left = -180
+}
