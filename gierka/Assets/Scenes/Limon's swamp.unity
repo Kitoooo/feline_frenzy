@@ -57436,7 +57436,15 @@ PrefabInstance:
     - target: {fileID: 1286790781888463802, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: WeaponPrefab
       value: 
-      objectReference: {fileID: 6463767985379664682, guid: b9452c4a6fd479242ab1e6520703eba8, type: 3}
+      objectReference: {fileID: 3966127312371611306, guid: df004043ba7f8354d90053145063787c, type: 3}
+    - target: {fileID: 1560167114619671489, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560167114619671489, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 255722385
+      objectReference: {fileID: 0}
     - target: {fileID: 5137086857374516954, guid: dfd42b43cea801549aed68b0e57e7c50, type: 3}
       propertyPath: m_Name
       value: Mage

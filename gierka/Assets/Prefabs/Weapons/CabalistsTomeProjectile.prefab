@@ -124,6 +124,7 @@ MonoBehaviour:
   range: 1000
   speed: 500
   m_ProjectileContactBehaviourPrefabs:
+  - {fileID: 2483310098706345734, guid: b653dda63ec79a843929bea03dd5bd04, type: 3}
   - {fileID: 7543876336664797687, guid: 726d73ad7d3a29e49a1cccd34ee3f68a, type: 3}
   - {fileID: 7188763316694279462, guid: 85205263f27182b4ab5a719f90b865f7, type: 3}
 --- !u!114 &6705597400142829332
@@ -138,7 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7848f9ebf04f01d4db72a55d387a965e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DamageIndicatorPrefab: {fileID: 0}
 --- !u!50 &1414703912663295919
 Rigidbody2D:
   serializedVersion: 4

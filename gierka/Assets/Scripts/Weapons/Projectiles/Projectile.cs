@@ -81,6 +81,10 @@ public class Projectile : MonoBehaviour
     {
         CheckContact(other);
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        CheckContact(other);
+    }
 
     protected void CheckContact(Collision2D other)
     {

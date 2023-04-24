@@ -43,13 +43,13 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Characters
+  - name: Enemies
     uniqueID: 191765377
     locked: 0
   - name: Projectiles
     uniqueID: 2920413449
     locked: 0
-  - name: Weapons
+  - name: Player & Weapons
     uniqueID: 255722385
     locked: 0
   - name: ProjectileEffects

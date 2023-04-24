@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 255722385
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1375179878, guid: e54c8009876c4014092ae830c3a7c7ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &2824613653269696716
 Animator:
   serializedVersion: 4
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_TriggerType: 3
   orbitRadius: 2
   pointAtCursor: 0
+  angleToOwner: 0
   m_CriticalChance: 0
   m_CriticalMultiplier: 0
   m_BaseCriticalChance: 240

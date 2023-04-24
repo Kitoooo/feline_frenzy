@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D m_Body { get; protected set; }
     public Renderer m_Renderer { get; protected set; }
 
-    public Animator m_Animator;
+    protected Animator m_Animator;
 
     protected float horizontal;
     protected float vertical;

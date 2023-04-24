@@ -24,4 +24,9 @@ public class ProjectileContactAnimation : ProjectileContact
     {
         transform.rotation = self.transform.rotation;
     }
+
+    public override void OnContact(Projectile self, Collider2D other)
+    {
+        transform.rotation = self.transform.rotation;
+    }
 }
