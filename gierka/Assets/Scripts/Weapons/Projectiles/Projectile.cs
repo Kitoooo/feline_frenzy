@@ -49,6 +49,7 @@ public class Projectile : MonoBehaviour
         lastVelocity = m_Body.velocity;
         if (m_DistanceTravelled > range || (marked && markForDestroyFlags.Count > 0))
         {
+            OnDestroy();
             Destroy(gameObject);
         }
     }
@@ -125,4 +126,8 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    protected virtual void OnDestroy()
+    {
+
+    }
 }   
