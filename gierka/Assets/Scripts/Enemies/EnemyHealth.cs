@@ -46,6 +46,7 @@ public class EnemyHealth : Health
     {
         m_Animator.SetBool("isDead", isDead);
         GetComponent<Rigidbody2D>().simulated = false;
+        LevelController.instance.addExperience(200);
     }
 
     protected override void onDamageTaken()

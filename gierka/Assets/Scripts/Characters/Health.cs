@@ -16,7 +16,7 @@ public abstract class Health : MonoBehaviour
     }
     public void UpdateHealth(float amount)
     {
-        Debug.Log("taking damage" + amount);
+        //Debug.Log("taking damage" + amount);
         m_CurrentHealth += amount;
         m_CurrentHealth = Mathf.Min(m_CurrentHealth, m_MaxHealth);
         if(amount < 0.0f)

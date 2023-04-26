@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d38e42bb46dc7e54698ae7a29b295f7f
+guid: d6f2720d9b68bde4a83f3d307c7a34f0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -107,11 +107,53 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HealthbarFlask
+      name: ExpBar
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 394
+        width: 508
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1c19b84688344438511156b1c9cf99
+      internalID: 276396117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExpBorder
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 463
+        width: 516
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3246cd818e086c047a528f9855715697
+      internalID: 621610145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HealthBarFlasknew
       rect:
         serializedVersion: 2
         x: 12
-        y: 9
+        y: 109
         width: 23
         height: 147
       alignment: 0
@@ -121,18 +163,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfb352875377e1943b8c02f60e4ace01
-      internalID: -706645789
+      spriteID: b14a210b3a9053b48adc80c8b37d6fe8
+      internalID: 229892527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HealthBar
+      name: HealthBarnew
       rect:
         serializedVersion: 2
-        x: 46
-        y: 11
+        x: 42
+        y: 112
         width: 19
         height: 139
       alignment: 0
@@ -142,50 +184,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 970c3af2038495f4e9edf8d6af2939eb
-      internalID: -1271271623
+      spriteID: 7dad74c1e0a1e67418248f3369e04add
+      internalID: 1710557750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ExperienceBar
+      name: BackgroundCircleUI
       rect:
         serializedVersion: 2
-        x: 263
-        y: 366
-        width: 490
-        height: 66
+        x: 663
+        y: 256
+        width: 81
+        height: 81
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba85931dc203c6447ad4968818873b3d
-      internalID: 1712202881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BackgroundUI
-      rect:
-        serializedVersion: 2
-        x: 164
-        y: 57
-        width: 470
-        height: 299
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 19, y: 38, z: 28, w: 32}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0af6cb51078bb754a96a137edf6e502c
-      internalID: -1919675905
+      spriteID: 8cb5a6c8524e9844e80f9167a1d9c4d3
+      internalID: 1629614817
       vertices: []
       indices: 
       edges: []
@@ -201,10 +222,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BackgroundUI: -1919675905
-      HealthbarFlask: -706645789
-      ExperienceBar: 1712202881
-      HealthBar: -1271271623
+      ExpBar: 276396117
+      HealthBarFlasknew: 229892527
+      HealthBarnew: 1710557750
+      ExpBorder: 621610145
+      BackgroundCircleUI: 1629614817
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
